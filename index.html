@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeting App</title>
+    <link rel="stylesheet" href="/budgeting-app/style.css">
+</head>
+
+<body>
+    <h1>Budgeting App</h1>
+    <div class="container">
+        <div class="row">
+            <div id="budget-form">
+                <h2>Budget</h2>
+                <div class="form-group">
+                    <input type="number" id="budget-amount" class="form-control" placeholder="Enter budget">
+                    <button onclick="setBudget()" class="budget-btn">Set Budget</button>
+                </div>
+            </div>
+
+
+            <div id="expense-form">
+                <h2>Expenses</h2>
+                <div class="form-group">
+                    <input type="text" id="expense-title" class="form-control" placeholder="Enter product title">
+                    <input type="number" id="expense-amount" class="form-control" placeholder="Enter product amount">
+                    <button onclick="addExpense()" class="expense-btn">Add Expense</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- second div start -->
+    <div class="container2">
+        <table id="summary">
+            <th>
+            <td id="total-budget">Total Budget: 0</td>
+            </th>
+            <th>
+            <td id="total-expenses">Product: 0</td>
+            </th>
+            <th>
+            <td id="remaining-balance">Remaining Balance: 0</td>
+            </th>
+        </table>
+    </div>
+
+    <div class="container3" id="expense-list">
+        <h2>Expense List</h2>
+        <table id="expenses-table">
+            <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>Product Title</th>
+                    <th>Product Cost</th>
+                </tr>
+            </thead>
+            <tbody id="expenses"></tbody>
+        </table>
+    </div>
+    <script src="/budgeting-app/script.js"></script>
+</body>
+
+</html>
